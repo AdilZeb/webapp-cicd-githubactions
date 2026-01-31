@@ -1,0 +1,14 @@
+name: Deploy-dist
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    deploy:
+     runs-on: ubuntu-latest
+     steps:
+        - name: Deploy Application
+          run: |
+           echo "${{toJson(github)}}"
+           git clone https://github.com/AdilZeb/${{github.repository}}.git             
