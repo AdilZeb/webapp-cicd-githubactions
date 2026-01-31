@@ -11,4 +11,12 @@ jobs:
         - name: Deploy Application
           run: |
            echo "${{toJson(github)}}"
-           git clone https://github.com/${{github.repository}}.git             
+           git clone https://github.com/${{github.repository}}.git 
+        - name: install node js
+          uses: actions/setup-node@v3
+          with:
+               node-version: '16'
+        - name: Install Dependencies
+          run: npm install
+        - name: Build Application
+          run: npm run build            
