@@ -11,4 +11,4 @@ jobs:
         - name: Deploy Application
           run: |
            echo "${{toJson(github)}}"
-           git clone https://github.com/AdilZeb/${{github.repository}}.git             
+           git clone https://github.com/${{github.repository}}.git             
